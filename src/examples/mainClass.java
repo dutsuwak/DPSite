@@ -1,6 +1,7 @@
 package examples;
 
 import designPatterns.*;
+import designPatterns.Builder.BuilderImp;
 import userInterface.crStation;
 import userInterface.frStation;
 import userInterface.usStation;
@@ -23,7 +24,7 @@ public class mainClass {
 		nuevo.drawShape(2);*/
 		
 		//Ejemplo de uso de la Clase Observer
-		Subject subject = new Subject();
+		/*Subject subject = new Subject();
 		
 		new crStation(subject);
 		new usStation(subject);
@@ -32,7 +33,11 @@ public class mainClass {
 		System.out.println("\n Primer Envio de Mensaje: 15 \n");
 		subject.setState(15);
 		System.out.println("\n Segundo Envio de Mensaje: 10 \n");
-		subject.setState(10);
+		subject.setState(10);*/
+		
+		//Ejemplo de uso de la Clase Builder
+		
+		Builder helado = new BuilderImp(3).addChocolate(true).addStrawberry(true).addVanilla(true).build();
 	}
 
 }
